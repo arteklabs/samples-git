@@ -97,3 +97,8 @@ Log branch commits:
    # ignore merges
    git log --oneline --no-merges
 
+Fix last commit message (of unpushed commit)
+
+.. code:: shell
+
+   git commit --amend
