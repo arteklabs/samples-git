@@ -144,6 +144,52 @@ List remote branches (requires ``pull`` first)
 
    git branch -r
 
+List all branches (``*`` denotes current branch)
+
+.. code:: shell
+
+   $ git branch -a
+   * latest
+   remotes/origin/HEAD -> origin/latest
+   remotes/origin/latest
+
+Get changes made to remote branches without merging them with the local branches. In the example below, changes were fetched onto ``origin/latest`` but not to ``latest``.
+
+.. code:: shell
+
+   $ git fetch origin
+   $ git branch
+   * latest
+   $ tree test
+   test
+   └── test
+       ├── test
+       │   └── test.html
+       └── test.html
+   $ git branch
+   * (HEAD detached at origin/latest)
+   latest
+   $ tree test
+   test
+   ├── test
+   │   ├── test
+   │   │   └── test.html
+   │   └── test.html
+   └── test.html
+
+Get changes made to remote branches and merge them with the local branches.
+
+.. code:: shell
+
+   $ git pull origin
+
+Push changes to remote branch
+
+.. code:: shell
+
+   $ git pull origin
+
+
 FAQ
 ===
 
@@ -164,3 +210,12 @@ E1
 If you've indexed changes to ``file``, can you restore them with ``git restore file``?
 
 No, it is required to ``restore --staged`` and then ``restore``.
+
+E2
+--
+
+How to remove locally a branch that has been removed remotely?
+
+.. code:: shell
+
+   git remote update origin --prune
