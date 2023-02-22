@@ -28,8 +28,14 @@ Ignore files:
     # ignore all html files
     docs/**/*.html
 
-Compare indexed to last commit
+Compare ``indexed`` to last commit:
 
 .. code:: shell
 
     diff --staged
+
+Compare ``modified`` to last commit:
+
+.. code:: shell
+
+    diff
