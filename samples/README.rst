@@ -39,3 +39,9 @@ Compare ``modified`` to last commit:
 .. code:: shell
 
     diff
+
+Index and commit with message:
+
+.. code:: shell
+
+    git commit -a -m "commit-message"
