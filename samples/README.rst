@@ -88,7 +88,7 @@ Log branch commits:
 
 .. code:: shell
 
-   # log last N commits in a single line with commit stats (line changes count 
+   # log last N commits in a single line with commit stats (line changes count
    # per file)
    git log -N --oneline --stats
 
@@ -126,11 +126,23 @@ List remotes:
 
 .. code:: shell
 
-   # origin is the remote you've cloned from. Each remote can have its own 
+   # origin is the remote you've cloned from. Each remote can have its own
    # protocol: ssh, https, ...
    $ git remote -v
    origin  github:arteklabs/samples-git (fetch)
    origin  github:arteklabs/samples-git (push)
+
+List local branches:
+
+.. code:: shell
+
+   git branch
+
+List remote branches (requires ``pull`` first)
+
+.. code:: shell
+
+   git branch -r
 
 FAQ
 ===
