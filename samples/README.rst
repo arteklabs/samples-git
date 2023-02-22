@@ -40,13 +40,20 @@ Compare ``modified`` to last commit:
 
    git diff
 
+Index change:
+
+.. code:: shell
+
+   git add file
+   git add dir
+
 Index and commit with message:
 
 .. code:: shell
 
    git commit -a -m "commit-message"
 
-Remove from the index and from the working directory (the docs forgot ``-f``, add to the public repo):
+Remove from the index and from the working directory (the docs forgot ``-f``, add to the public repo). Even if the files have been committed already, it will remove them from the index, that is, index their removal.
 
 .. code:: shell
 
@@ -102,3 +109,36 @@ Fix last commit message (of unpushed commit)
 .. code:: shell
 
    git commit --amend
+
+Unindex:
+
+.. code:: shell
+
+   git restore --cached file
+
+Remove unindexed changes:
+
+.. code:: shell
+
+   git restore file
+
+FAQ
+===
+
+difference between fetch and pull
+---------------------------------
+
+Difference between restore and rm
+---------------------------------
+
+``restore`` reverts the uncommitted indexed changes. ``rm`` removes the indexed files, whether they've been committed or not.
+
+Exercises
+=========
+
+E1
+--
+
+If you've indexed changes to ``file``, can you restore them with ``git restore file``?
+
+No, it is required to ``restore --staged`` and then ``restore``.
