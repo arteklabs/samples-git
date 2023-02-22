@@ -187,8 +187,19 @@ Push changes to remote branch
 
 .. code:: shell
 
-   $ git pull origin
+   $ git push github
 
+Rename remote:
+
+.. code:: shell
+
+   $ git remote rename origin github
+
+Remove remote
+
+.. code:: shell
+
+    $ git remote remove github
 
 FAQ
 ===
@@ -219,3 +230,4 @@ How to remove locally a branch that has been removed remotely?
 .. code:: shell
 
    git remote update origin --prune
+
