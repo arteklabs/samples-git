@@ -122,6 +122,16 @@ Remove unindexed changes:
 
    git restore file
 
+List remotes:
+
+.. code:: shell
+
+   # origin is the remote you've cloned from. Each remote can have its own 
+   # protocol: ssh, https, ...
+   $ git remote -v
+   origin  github:arteklabs/samples-git (fetch)
+   origin  github:arteklabs/samples-git (push)
+
 FAQ
 ===
 
